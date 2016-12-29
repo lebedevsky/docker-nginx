@@ -5,6 +5,6 @@ RUN yum install -y nginx
 
 RUN yum -y clean all
 
-EXPOSE 80 443
+EXPOSE 80 443 9000
 
 CMD ["nginx", "-g", "daemon off;"]
