@@ -1,7 +1,7 @@
 FROM lebedevsky/docker-ubuntu16
 MAINTAINER an.lebedevsky@gmail.com
 
-RUN apt-get install nginx
+RUN apt-get -y install nginx
 
 # clean
 RUN apt-get autoclean
