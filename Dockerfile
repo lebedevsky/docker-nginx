@@ -1,10 +1,11 @@
-FROM lebedevsky/docker-centos7
-MAINTAINER an.elebedevsky@gmail.com
+FROM lebedevsky/docker-ubuntu16
+MAINTAINER an.lebedevsky@gmail.com
 
-RUN yum install -y nginx
+RUN apt-get install nginx
 
-RUN yum -y clean all
+# clean
+RUN apt-get autoclean
 
-EXPOSE 80 443 9000
+EXPOSE 80 443
 
 CMD ["nginx", "-g", "daemon off;"]
